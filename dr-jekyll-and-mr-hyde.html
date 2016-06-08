@@ -34,7 +34,7 @@ Contents
 
 {% for chapter in book_contents %}
 <div class="chapter">
-  <h1>{{ chapter.title }}</h1>
+  <h1>{{forloop.index}}. {{ chapter.title }}</h1>
 
   <!-- try adding content using include_relative -->
   {% capture txt %}{% include_relative _dr-jekyll-and-mr-hyde/{{chapter.path}} %}{% endcapture %}
