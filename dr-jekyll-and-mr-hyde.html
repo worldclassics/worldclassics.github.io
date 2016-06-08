@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+{% assign book           = site.data.dr_jekyll_and_mr_hyde.book %}
+<!-- todo: check - can we use book.contents - why? why not? -->
+{% assign book_contents  = site.data.dr_jekyll_and_mr_hyde.contents %}
+
+
+<!-- cover -->
+
+World Classics
+
+<h1>{{ book.title }}</h1>
+<h3>by {{ book.author.name }}</h3>
+
+
+<!-- table of contents -->
+
+<div class='toc'>
+
+Contents
+
+<ul>
+{% for chapter in book_contents %}
+  <li>{{ chapter.title }}</li>
+{% endfor %}
+</ul>
+</div>
+
+
+
+<!-- chapters -->
+
+{% for chapter in book_contents %}
+<div class="chapter">
+  <h1>{{ chapter.title }}</h1>
+
+  <!-- try adding content using include_relative -->
+  {% capture txt %}{% include_relative _dr-jekyll-and-mr-hyde/{{chapter.path}} %}{% endcapture %}
+
+  <!-- hack: cut off yaml front matter header
+     possible alternative??:
+       try to use collection and use a content lookup with title or path - why? whynot??
+    -->
+  {% assign txt2 = txt | replace_first: '---', '' | replace_first: '---', '@@END@@' | split: '@@END@@' %}
+  {{ txt2[1] | markdownify }}
+</div>
+{% endfor %}

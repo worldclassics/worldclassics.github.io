@@ -1,0 +1,6 @@
+[submodule "_dr-jekyll-and-mr-hyde"]
+	path = _dr-jekyll-and-mr-hyde
+	url = https://github.com/worldclassics/dr-jekyll-and-mr-hyde
+[submodule "_the-trial"]
+	path = _the-trial
+	url = https://github.com/worldclassics/the-trial
