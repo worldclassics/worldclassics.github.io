@@ -10,35 +10,21 @@ Free books include:
 </p>
 
 
+{% for book in site.data.books %}
 <p>
-  <b><a href="the-trial">The Trial</a></b>
-      by Franz Kafka
+  <b><a href="{{ book.path }}">{{ book.title }}</a></b>
+      by {{ book.author.name }}
     <span style="font-size: 70%;">
-         (<a href="https://github.com/worldclassics/the-trial">Source in the Manuscripts book format</a>)
+         (<a href="{{ book.github.url }}">Source in the Manuscripts book format</a>)
     </span>
-<a class="github-button" href="https://github.com/worldclassics/the-trial"
+<a class="github-button" href="{{ book.github.url }}"
     data-icon="octicon-star"
-    data-count-href="/worldclassics/the-trial/stargazers"
-    data-count-api="/repos/worldclassics/the-trial#stargazers_count"
+    data-count-href="/{{ book.github.repo }}/stargazers"
+    data-count-api="/repos/{{ book.github.repo }}#stargazers_count"
     data-count-aria-label="# stargazers on GitHub"
-    aria-label="Star worldclassics/the-trial on GitHub">Star</a>
+    aria-label="Star {{ book.github.repo }} on GitHub">Star</a>
 </p>
-
-
-
-<p>
-  <b><a href="dr-jekyll-and-mr-hyde">Strange Case of Dr. Jekyll and Mr. Hyde</a></b>
-      by Robert Louis Stevenson
-    <span style="font-size: 70%;">
-         (<a href="https://github.com/worldclassics/dr-jekyll-and-mr-hyde">Source in the Manuscripts book format</a>)
-    </span>
-<a class="github-button" href="https://github.com/worldclassics/dr-jekyll-and-mr-hyde"
-    data-icon="octicon-star"
-    data-count-href="/worldclassics/dr-jekyll-and-mr-hyde/stargazers"
-    data-count-api="/repos/worldclassics/dr-jekyll-and-mr-hyde#stargazers_count"
-    data-count-aria-label="# stargazers on GitHub"
-    aria-label="Star worldclassics/dr-jekyll-and-mr-hyde on GitHub">Star</a>
-</p>
+{% endfor %}
 
 
 <!-- GitHub Buttons

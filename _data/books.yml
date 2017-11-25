@@ -1,0 +1,16 @@
+- title: The Trial
+  path:  the-trial     ## use href instead of path - why? why not?
+  author:
+    name: Franz Kafka
+  github:
+    url:   https://github.com/worldclassics/the-trial
+    repo:  worldclassics/the-trial
+
+
+- title: Strange Case of Dr. Jekyll and Mr. Hyde
+  path:  dr-jekyll-and-mr-hyde
+  author:
+    name: Robert Louis Stevenson
+  github:
+    url:   https://github.com/worldclassics/dr-jekyll-and-mr-hyde
+    repo:  worldclassics/dr-jekyll-and-mr-hyde/stargazers
