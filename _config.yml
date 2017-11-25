@@ -1,5 +1,12 @@
+####################
+# site settings
+
+title: World Classics - The world's greatest (literature) books in .txt
+
+
+
 ########
-# settings
+# build settings
 
 markdown: kramdown
 
