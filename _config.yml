@@ -8,7 +8,6 @@ kramdown:
   hard_wrap: false
 
 sass:
-  sass_dir: css
   style: expanded
 
 exclude:
@@ -20,3 +19,8 @@ exclude:
 
 # safe: true
 # lsi: false
+
+plugins:
+- jekyll-remote-theme
+
+remote_theme: worldclassics/jekyll-books-theme
