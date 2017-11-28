@@ -8,6 +8,9 @@ home:
   title: World Classics
 
 
+style:
+  link_color: '#000080'
+
 
 ########
 # build settings
@@ -28,10 +31,8 @@ exclude:
 - Gemfile.lock
 
 
-# safe: true
-# lsi: false
 
 plugins:
 - jekyll-remote-theme
 
-remote_theme: octobook/book-twentyeighteen-theme
+remote_theme: octobook/books-twentyeighteen-theme
