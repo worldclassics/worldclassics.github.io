@@ -34,4 +34,4 @@ exclude:
 plugins:
 - jekyll-remote-theme
 
-remote_theme: worldclassics/jekyll-books-theme
+remote_theme: octobook/book-twentyeighteen-theme
